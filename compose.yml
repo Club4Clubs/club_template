@@ -1,6 +1,8 @@
 # ### compose.yml
+# ### version: "3.8"
+# ### 
 #
-#version: "3.8"
+#
 
 volumes:
   n8n_app_data:
@@ -46,7 +48,7 @@ services:
       - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
       - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
       - EXECUTIONS_DATA_PRUNE=true
-      - N8N_EDITOR_BASE_URL = https://n8n.media39.ru/
+      - N8N_EDITOR_BASE_URL = https://media39.ru/
       - WEBHOOK_URL0=${DOMAIN}
       - WEBHOOK_URL=https://media39.ru/
       - VUE_APP_URL_BASE_API=https://media39.ru/api/v1/
@@ -60,3 +62,4 @@ services:
     volumes:
       - n8n_app_data:/home/node/.n8n
       - /n8n-local-files:/files
+      
